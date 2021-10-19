@@ -18,23 +18,14 @@ header {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-  min-height: 100%
 }
-@keyframes fadeIn85 {
+@keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
-    opacity: .85;
+    opacity: 1;
   }
-}
-.fade-in {
-  animation: 1s fadeIn;
-  opacity: 1
-}
-.emoji {
-  font-size: 26px;
-  padding: 0 0 0 3px;
 }
 @keyframes colorChange {
   0% {
@@ -50,10 +41,10 @@ header {
     fill: #c9e7ff;
   }
   44.44% {
-    fill: #92fbff;
+    fill: #bbfdff;
   }
   55.55% {
-    fill: rgb(139, 207, 252);
+    fill: rgb(178, 224, 255);
   }
   66.66% {
     fill: #cfe4ff;
@@ -67,17 +58,6 @@ header {
   100% {
     fill: rgb(199, 244, 255);
   }
-}
-.fishy {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
-.wf {
-  z-index: 10;
-  animation: colorChange 5s linear infinite;
 }
 @keyframes twinkle {
   from {
@@ -111,27 +91,57 @@ header {
     background-position: -10000px 5000px;
   }
 }
+.fade-in {
+  animation: 1s fadeIn;
+  opacity: 1;
+}
+.fade-in10 {
+  animation: 10s fadeIn;
+  opacity: 1;
+}
+.emoji {
+  font-size: 26px;
+  padding: 0 0 0 3px;
+}
+.info {
+  color: azure;
+  background-color: black;
+  z-index: 4;
+}
 .stars, .twinkling {
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  width:100%;
-  height:100%;
-  display:block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 .stars {
-  background:#000 url(./img/stars.png) repeat top center;
-  z-index:0;
+  background: #000 url(./img/stars.png) repeat top center;
+  z-index: 0;
 }
 .twinkling{
-  background:transparent url(./img/twinkling.png) repeat top center;
-  z-index:1;
+  background: transparent url(./img/twinkling.png) repeat top center;
+  z-index: 1;
   opacity: .5;
-  -moz-animation:twinkle 200s linear infinite;
-  -ms-animation:twinkle 200s linear infinite;
-  -o-animation:twinkle 200s linear infinite;
-  -webkit-animation:twinkle 200s linear infinite;
-  animation:twinkle 200s linear infinite;
+  -moz-animation: twinkle 200s linear infinite;
+  -ms-animation: twinkle 200s linear infinite;
+  -o-animation: twinkle 200s linear infinite;
+  -webkit-animation: twinkle 200s linear infinite;
+  animation: twinkle 200s linear infinite;
+}
+.fishy {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.wf {
+  margin-left: 70px;
+  z-index: 10;
+  animation: colorChange 10s linear infinite;
 }
