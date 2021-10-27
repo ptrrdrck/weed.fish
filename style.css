@@ -1,24 +1,29 @@
 @charset "UTF-8";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box
 }
+
 html {
-  min-height: 100%;
-}
-body {
-  font-family: 'Fira Code',monospace;
   font-size: 17px;
+  height: auto;
+}
+
+body {
+  font-family: 'Fira Code', monospace;
   letter-spacing: 3px;
   background-color: #000;
 }
+
 header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin: 50px 0;
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -27,6 +32,7 @@ header {
     opacity: 1;
   }
 }
+
 @keyframes colorChange {
   0% {
     fill: rgb(199, 244, 255);
@@ -59,6 +65,7 @@ header {
     fill: rgb(199, 244, 255);
   }
 }
+
 @keyframes twinkle {
   from {
     background-position: 0 0;
@@ -67,6 +74,7 @@ header {
     background-position: -10000px 5000px;
   }
 }
+
 @-webkit-keyframes twinkle {
   from {
     background-position: 0 0;
@@ -75,6 +83,7 @@ header {
     background-position: -10000px 5000px;
   }
 }
+
 @-moz-keyframes twinkle {
   from {
     background-position: 0 0;
@@ -83,6 +92,7 @@ header {
     background-position: -10000px 5000px;
   }
 }
+
 @-ms-keyframes twinkle {
   from {
     background-position: 0 0;
@@ -91,23 +101,18 @@ header {
     background-position: -10000px 5000px;
   }
 }
-.fade-in {
-  animation: 1s fadeIn;
-  opacity: 1;
-}
+
 .fade-in10 {
   animation: 10s fadeIn;
   opacity: 1;
 }
-.emoji {
-  font-size: 26px;
-  padding: 0 0 0 3px;
-}
+
 .info {
   color: azure;
   background-color: black;
   z-index: 4;
 }
+
 .stars, .twinkling {
   position: absolute;
   top: 0;
@@ -118,10 +123,12 @@ header {
   height: 100%;
   display: block;
 }
+
 .stars {
   background: #000 url(./img/stars.png) repeat top center;
   z-index: 0;
 }
+
 .twinkling{
   background: transparent url(./img/twinkling.png) repeat top center;
   z-index: 1;
@@ -131,17 +138,4 @@ header {
   -o-animation: twinkle 200s linear infinite;
   -webkit-animation: twinkle 200s linear infinite;
   animation: twinkle 200s linear infinite;
-}
-.fishy {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-}
-.wf {
-  margin-left: 70px;
-  z-index: 10;
-  animation: colorChange 10s linear infinite;
 }
